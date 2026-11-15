@@ -5,7 +5,7 @@ function App() {
     <>
       <main className="container">
         <h1>Read Journey</h1>
-      </main>      
+      </main>
     </>
   )
 }
