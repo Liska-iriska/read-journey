@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 137 / 208;
+  margin-bottom: 6px;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: var(--color-surface-3);
+  transition: opacity var(--transition);
+}
+
+.cover:hover {
+  opacity: 0.85;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholder {
+  width: 40%;
+  aspect-ratio: 1;
+  color: var(--color-gray);
+}
+
+.title,
+.author {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+}
+
+.author {
+  color: var(--color-gray);
+  font-size: 10px;
+}
