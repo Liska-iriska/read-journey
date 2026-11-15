@@ -1,0 +1,55 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: rgb(20 20 20 / 60%);
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  padding: 50px 20px 32px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background-color: var(--color-surface-2);
+}
+
+.sm {
+  max-width: 342px;
+}
+
+.md {
+  max-width: 500px;
+}
+
+.close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  color: var(--color-white);
+  transition: opacity var(--transition);
+}
+
+.close:hover {
+  opacity: 0.6;
+}
+
+.icon {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+@media (width >= 768px) {
+  .modal {
+    padding: 50px 40px 40px;
+  }
+}
