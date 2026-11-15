@@ -5,7 +5,7 @@ import RegisterForm from '@/components/RegisterForm/RegisterForm'
 import RestrictedRoute from '@/components/RestrictedRoute/RestrictedRoute'
 import { useAuth } from '@/hooks/useAuth'
 import Header from '@/components/Header/Header'
-import AuthLayout from '../AuthLayout/AuthLayout'
+import AuthLayout from '@/components/AuthLayout/AuthLayout'
 
 function App() {
   const { isLoggedIn, isRefreshing } = useAuth()
