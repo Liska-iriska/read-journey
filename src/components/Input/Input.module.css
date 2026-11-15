@@ -1,0 +1,102 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 14px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-input);
+  background-color: var(--color-surface-3);
+  font-size: 12px;
+  transition: border-color var(--transition);
+}
+
+.field:hover {
+  border-color: var(--color-border);
+}
+
+.field:focus-within {
+  border-color: var(--color-gray);
+}
+
+.field.error {
+  border-color: var(--color-danger);
+}
+
+.field.success {
+  border-color: var(--color-success);
+}
+
+.label {
+  flex-shrink: 0;
+  color: var(--color-gray);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  color: var(--color-white);
+}
+
+.input::placeholder {
+  color: var(--color-white);
+  opacity: 0.6;
+}
+
+.toggle {
+  display: flex;
+  color: var(--color-white);
+}
+
+.icon {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+}
+
+.icon.error {
+  color: var(--color-danger);
+}
+
+.icon.success {
+  color: var(--color-success);
+}
+
+.message {
+  padding-left: 14px;
+  font-size: 10px;
+}
+
+.message.error {
+  color: var(--color-danger);
+}
+
+.message.success {
+  color: var(--color-success);
+}
+
+@media (width >= 768px) {
+  .field {
+    height: 52px;
+    font-size: 14px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+}
