@@ -1,7 +1,8 @@
 import { Toaster } from 'react-hot-toast'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import LoginForm from '@/components/LoginForm/LoginForm'
 import RegisterForm from '@/components/RegisterForm/RegisterForm'
+import PrivateRoute from '@/components/PrivateRoute/PrivateRoute'
 import RestrictedRoute from '@/components/RestrictedRoute/RestrictedRoute'
 import { useAuth } from '@/hooks/useAuth'
 import Header from '@/components/Header/Header'
@@ -34,6 +35,8 @@ function App() {
             }
           />
         </Route>
+
+        <Route element={<PrivateRoute redirectTo="/register" />}></Route>
       </Routes>
 
       <Toaster
