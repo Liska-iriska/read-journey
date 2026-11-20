@@ -50,3 +50,47 @@
   color: var(--color-gray);
   font-size: 10px;
 }
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.delete {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid rgb(233 5 22 / 20%);
+  border-radius: 50%;
+  background-color: rgb(233 5 22 / 10%);
+  color: var(--color-danger);
+  transition: border-color var(--transition);
+}
+
+.deleteIcon {
+  width: 14px;
+  height: 14px;
+}
+
+@media (hover: hover) {
+  .delete:hover {
+    border-color: var(--color-danger);
+  }
+}
+
+/* ЗМІНА: компактний варіант для блоку Recommended books */
+.compact .title,
+.compact .author {
+  font-size: 10px;
+}
