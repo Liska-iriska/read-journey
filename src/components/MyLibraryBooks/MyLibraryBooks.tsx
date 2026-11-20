@@ -29,7 +29,6 @@ function MyLibraryBooks({ reloadKey }: MyLibraryBooksProps) {
   const [selected, setSelected] = useState<RecommendedBook | null>(null)
 
   const load = useCallback(() => {
-    // reloadKey у залежностях: нове значення = повторний запит
     void reloadKey
     return getOwnBooks(filter === 'all' ? undefined : (filter as BookStatus))
   }, [filter, reloadKey])
