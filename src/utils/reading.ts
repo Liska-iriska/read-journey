@@ -5,7 +5,6 @@ export function getActiveReading(book: Book): Reading | undefined {
   return book.progress.find((item) => item.status === 'active')
 }
 
-/** Завершені сесії читання, від нових до старих. */
 export function getFinishedReadings(book: Book): Reading[] {
   return book.progress
     .filter((item) => item.finishPage !== undefined && item.finishReading)
@@ -15,7 +14,6 @@ export function getFinishedReadings(book: Book): Reading[] {
     )
 }
 
-/** Прочитано за сесію (першу і останню сторінку включно). */
 export function getPagesRead(reading: Reading): number {
   if (reading.finishPage === undefined) return 0
 
@@ -37,7 +35,6 @@ export interface ReadingGroup {
   items: Reading[]
 }
 
-/** Групує завершені сесії за датою (dd.mm.yyyy). */
 export function groupByDate(readings: Reading[]): ReadingGroup[] {
   const groups: ReadingGroup[] = []
 

@@ -89,7 +89,6 @@
   }
 }
 
-/* ЗМІНА: компактний варіант для блоку Recommended books */
 .compact .title,
 .compact .author {
   font-size: 10px;

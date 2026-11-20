@@ -12,7 +12,6 @@ export function getMinutesBetween(start: string, end: string): number {
   return Math.max(0, Math.round(diff / 60000))
 }
 
-/** Відсоток із точністю до сотих, без зайвих нулів (7.6, 1.04, 19.14). */
 export function getPercent(part: number, total: number): number {
   if (total <= 0) return 0
 
