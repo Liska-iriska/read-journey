@@ -1,0 +1,33 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: var(--radius-panel);
+  background-color: var(--color-surface-2);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@media (width >= 768px) {
+  .panel {
+    gap: 28px;
+    padding: 40px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+}
