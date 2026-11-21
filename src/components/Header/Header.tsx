@@ -3,13 +3,14 @@ import toast from 'react-hot-toast'
 import { Link } from 'react-router-dom'
 import Button from '@/components/Button/Button'
 import MobileMenu from '@/components/MobileMenu/MobileMenu'
+import UserBar from '@/components/UserBar/UserBar'
 import UserNav from '@/components/UserNav/UserNav'
 import { useAuth } from '@/hooks/useAuth'
 import { getErrorMessage } from '@/utils/getErrorMessage'
 import css from './Header.module.css'
 
 function Header() {
-  const { user, logOut } = useAuth()
+  const { logOut } = useAuth()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
@@ -32,9 +33,7 @@ function Header() {
       </div>
 
       <div className={css.user}>
-        <div className={css.avatar} title={user?.name}>
-          {user?.name.charAt(0).toUpperCase()}
-        </div>
+        <UserBar />
         <Button className={css.logout} onClick={handleLogout}>
           Log out
         </Button>
